@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+html {
+  font-size: 10px;
+  font-family: "PT Serif", serif;
+}
+
+.nav {
+  background-color: #9370DB;
+  display: flex;
+  justify-content: space-between;
+  height: 9vh;
+}
+.nav__logo {
+  width: 9rem;
+}
+.nav__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+}
+.nav__links {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+}
+.nav__links::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: #4e406a;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  transition: width 0.3s ease-in-out;
+}
+.nav__links:hover, .nav__links:hover::after {
+  width: 100%;
+  color: #4e406a;
+}
+.nav__burger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.nav__burger-line {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #4e406a;
+  margin: 0.8rem;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
