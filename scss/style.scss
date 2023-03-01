@@ -14,6 +14,7 @@ html {
     display: flex;
     justify-content: space-between;
     height: 9vh;
+    position: relative;
 
     &__logo {
         width: 9rem;
@@ -25,6 +26,23 @@ html {
         justify-content: space-around;
         align-items: center;
         width: 45%;
+        
+        @media (max-width: 850px) {
+            overflow-x: hidden;
+            position: absolute;
+            top: 9vh;
+            right: 0;
+            background-color: #4e406a;
+            display: flex;
+            flex-direction: column;
+            min-height: 91vh;
+            transition:.3s ease-in-out;
+            transform: translate(100%);
+        }
+
+        @media (max-width: 530px) {
+            width: 100%;
+        }
     }
 
     // menu link styles with underline animation
@@ -61,6 +79,11 @@ html {
         border: none;
         cursor: pointer;
         display: none;
+
+        @media (max-width: 850px) {
+            display: block;
+            transition: all .3s ease-in-out;
+        }
     }
 
     &__burger-line {
@@ -70,4 +93,9 @@ html {
         margin: .8rem;
         border-radius: 10px;
     }
+}
+
+
+.active {
+    transform: translate(0%);
 }
