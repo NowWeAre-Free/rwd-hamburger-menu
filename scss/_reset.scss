@@ -11,10 +11,13 @@
     margin: 0;
   }
   /*
-    3. Allow percentage-based heights in the application
+    3. Allow percentage-based heights in the application, custom css defaults only for this project
   */
   html, body {
     height: 100%;
+    font-size: 10px;
+    font-family: 'PT Serif', serif;
+    overflow: hidden;
   }
   /*
     Typographic tweaks!
