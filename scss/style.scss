@@ -4,11 +4,6 @@
 // google fonts
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
-html {
-    font-size: 10px;
-    font-family: 'PT Serif', serif;
-}
-
 .nav {
     background-color: #9370DB;
     display: flex;
@@ -23,21 +18,20 @@ html {
     &__menu {
         list-style-type: none;
         display: flex;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-around;
         width: 45%;
-        
+
         @media (max-width: 850px) {
-            overflow-x: hidden;
             position: absolute;
-            top: 9vh;
             right: 0;
-            background-color: #4e406a;
+            top: 9vh;
+            background-color: #9370DB;
             display: flex;
             flex-direction: column;
             min-height: 91vh;
-            transition:.3s ease-in-out;
             transform: translate(100%);
+            transition: .3s ease-in-out;
         }
 
         @media (max-width: 530px) {
@@ -76,10 +70,11 @@ html {
     //burger styles
     &__burger {
         background-color: transparent;
+        outline: none;
         border: none;
         cursor: pointer;
         display: none;
-
+        
         @media (max-width: 850px) {
             display: block;
             transition: all .3s ease-in-out;
